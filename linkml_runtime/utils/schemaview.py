@@ -303,7 +303,7 @@ class SchemaView(object):
                     # - subdir/types.yaml
                     # we should treat the two `types.yaml` as separate schemas from the POV of the
                     # origin schema.
-                    if sn.startswith('.') and ':' not in i:
+                    if '/' in sn and ':' not in i:
                         i = os.path.normpath(str(Path(sn).parent / i))
                     todo.append(i)
 
